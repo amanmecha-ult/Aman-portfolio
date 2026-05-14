@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aman Gurung</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Aman Gurung</h1>
+      <h2>Frontend Developer/Engineer</h2>
+      <h3>Available for Hire :)</h3>
+    </header>
+    <main>
+      <section aria-labelledby="skills-heading">
+        <h2>Skills I have</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Tailwind CSS</li>
+          <li>Javascript</li>
+          <li>React.js</li>
+          <li>Next.js</li>
+        </ul>
+      </section>
+      <section aria-labelledby="about-aman">
+        <h2>About me</h2>
+        <img src="#" alt="Aman Profile" />
+        <p>
+          Hi, I'm Aman — a frontend developer based in United Kingdom. I build for
+          the web with HTML, CSS, JavaScript, and React, and I'm currently going
+          deeper on TypeScript, Next.js, and Tailwind CSS. I care about clean,
+          accessible interfaces and writing code that's pleasant for the next
+          person to read.
+        </p>
+        <p>
+          I'm open to junior frontend roles and always happy to talk shop. Feel
+          free to reach out through the form below or find me on
+          <a href="https://linkedin.com/in/your-handle">LinkedIn</a> and
+          <a href="https://github.com/your-handle">GitHub</a>.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <section aria-label="social-links">
+        <h2>My socials</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Linkedin</a></li>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">amangurungmecha@gmail.com</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section aria-label="contant-form">
+        <h2>Get in touch</h2>
+        <form action="/contact" method="POST">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" autocomplete="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              autocomplete="email"
+              name="email"
+              required
+              aria-describedby="email-hint"
+            />
+          </div>
+          <div>
+            <label for="subject">Subject:</label>
+            <input
+              type="text"
+              name="subject"
+              required
+              aria-describedby="subject-hint"
+            />
+          </div>
+          <div>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="6" required></textarea>
+          </div>
+          <button type="submit">Send message</button>
+        </form>
+      </section>
+    </footer>
+  </body>
+</html>
