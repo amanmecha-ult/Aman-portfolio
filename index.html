@@ -3,91 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Aman Gurung</title>
   </head>
 
   <body>
-    <header>
-      <h1>Aman Gurung</h1>
-      <h2>Frontend Developer/Engineer</h2>
-      <h3>Available for Hire :)</h3>
+    <!-- Hero Section-->
+    <header class="hero">
+      <h1 class="hero__name">Aman Gurung</h1>
+      <h2 class="hero__roles">Frontend Developer/Engineer</h2>
+      <p class="badge badge__available">
+        <span class="badge__dot" aria-hidden="true"></span>
+        Available for hire
+      </p>
     </header>
-    <main>
-      <section aria-labelledby="skills-heading">
-        <h2>Skills I have</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Tailwind CSS</li>
-          <li>Javascript</li>
-          <li>React.js</li>
-          <li>Next.js</li>
+
+    <!-- Main content -->
+    <main class="container">
+      <!-- Skills Section -->
+      <section class="section skills" aria-labelledby="skills-heading">
+        <h2 id="skill-heading" class="section__title">Skills I have</h2>
+        <ul class="skills__list">
+          <li class="skill__chip">HTML</li>
+          <li class="skill__chip">CSS</li>
+          <li class="skill__chip">Tailwind CSS</li>
+          <li class="skill__chip">JavaScript</li>
+          <li class="skill__chip">React.js</li>
+          <li class="skill__chip">Next.js</li>
         </ul>
       </section>
-      <section aria-labelledby="about-aman">
-        <h2>About me</h2>
-        <img src="#" alt="Aman Profile" />
-        <p>
-          Hi, I'm Aman — a frontend developer based in United Kingdom. I build
-          for the web with HTML, CSS, JavaScript, and React, and I'm currently
-          going deeper on TypeScript, Next.js, and Tailwind CSS. I care about
-          clean, accessible interfaces and writing code that's pleasant for the
-          next person to read.
-        </p>
-        <p>
-          I'm open to junior frontend roles and always happy to talk shop. Feel
-          free to reach out through the form below or find me on
-        </p>
+
+      <!-- About me Section -->
+      <section class="section about" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="section__title">About me</h2>
+        <div class="about__grid">
+          <img
+            src="./assets/aman no background.png"
+            class="about_image"
+            alt="Aman Profile"
+          />
+          <div class="about__text">
+            <p>
+              Hi, I'm Aman — a frontend developer based in United Kingdom. I
+              build for the web with HTML, CSS, JavaScript, and React, and I'm
+              currently going deeper on TypeScript, Next.js, and Tailwind CSS. I
+              care about clean, accessible interfaces and writing code that's
+              pleasant for the next person to read.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
-    <footer>
-      <section aria-label="social-links">
-        <h2>My socials</h2>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Social Links -->
+      <section class="socials" aria-label="socials-heading">
+        <h2 id="social-heading" class="section__title">My socials</h2>
         <nav>
-          <ul>
+          <ul class="socials__list">
             <li>
-              <a href="https://www.linkedin.com/in/aman-gurung009/">Linkedin</a>
+              <a
+                class="social-link"
+                href="https://www.linkedin.com/in/aman-gurung009/"
+                >Linkedin</a
+              >
             </li>
-            <li><a href="https://github.com/amanmecha-ult">Github</a></li>
             <li>
-              <a href="amangurungmecha@gmail.com">amangurungmecha@gmail.com</a>
+              <a class="social-link" href="https://github.com/amanmecha-ult"
+                >Github</a
+              >
+            </li>
+            <!-- Email copy button for javascript -->
+            <li>
+              <button
+                class="social-link"
+                type="button"
+                data-copy="amangurungmecha@gmail.com"
+              >
+                amangurungmecha@gmail.com
+              </button>
             </li>
           </ul>
         </nav>
       </section>
-      <section aria-label="contant-form">
-        <h2>Get in touch</h2>
-        <form action="/contact" method="POST">
-          <div>
-            <label for="name">Name:</label>
-            <input type="text" autocomplete="name" name="name" required />
-          </div>
-          <div>
-            <label for="email">Email:</label>
+      <!-- Contact Form -->
+      <section class="contact" aria-label="contact-heading">
+        <h2 id="contact-heading" class="section__title">Get in touch</h2>
+        <form class="contact__form" action="/contact" method="POST">
+          <div class="form__field">
+            <label class="form__label" for="name">Name:</label>
             <input
-              type="email"
+              class="form__input"
+              type="text"
+              autocomplete="name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="email">Email:</label>
+            <input
+              class="form__input"
               autocomplete="email"
               name="email"
               required
               aria-describedby="email-hint"
             />
           </div>
-          <div>
-            <label for="subject">Subject:</label>
+          <div class="form__field">
+            <label class="form__label" for="subject">Subject:</label>
             <input
+              class="form__input"
               type="text"
               name="subject"
               required
               aria-describedby="subject-hint"
             />
           </div>
-          <div>
-            <label for="message">Message:</label>
-            <textarea name="message" id="message" rows="6" required></textarea>
+          <div class="form__field">
+            <label class="form__label" for="message">Message:</label>
+            <textarea
+              class="form__input"
+              name="message"
+              id="message"
+              rows="6"
+              required
+            ></textarea>
           </div>
-          <button type="submit">Send message</button>
+          <button class="btn btn--primary" type="submit">Send message</button>
         </form>
       </section>
+      <p class="footer-copy">
+        © 2026 Aman Gurung · Built with ♥ &amp; clean code
+      </p>
     </footer>
   </body>
 </html>
